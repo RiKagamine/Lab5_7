@@ -1,11 +1,49 @@
+__author__ = 'Rin'
 import math
 A = float(input("A: "))
 B = float(input("B: "))
 C = float(input("D: "))
 D = float(input("C: "))
+
+
 def m_func(a, b, c ,d):
     x1 = math.sin(A) + math.sin(B)
     x2 = C + D
     x = pow(math.e, x1 / x2)
     return x
 print(m_func(A,B,C,D))
+
+A = float(input("A: "))
+B = float(input("B: "))
+C = float(input("D: "))
+D = float(input("C: "))
+
+def m_func2(A, B, C, D):
+    x1 = B / 2 + D / C
+    x2 = math.e ** A * math.cos(x1)
+    x3 = D * C + math.sin(C)
+    X = x2 / x3
+    return X
+print(m_func(A,B,C,D))
+
+AB = float(input("AB: "))
+BC = float(input("BC: "))
+
+def m_func3(AB, BC):
+    AC1 = AB ** 2 + BC ** 2
+    AC = math.sqrt(AC1)
+    return AC
+print(m_func3(AB, BC))
+
+from functools import reduce
+from operator import mul
+def m_func4(A):
+    A = float(input("A: "))
+    lst = [A, A, A, A, A, A, A]
+    return "A^7: " + str(reduce(mul, lst))
+print(m_func4(A))
+
+def m_func(A):
+    A = str(input("A: "))
+    return (A[-4], A[-3])
+print(m_func(A))
